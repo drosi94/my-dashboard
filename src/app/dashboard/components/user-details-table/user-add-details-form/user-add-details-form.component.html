@@ -1,0 +1,46 @@
+<div class="login-form">
+  <mat-card>
+    <mat-card-content>
+      <h2>Add user details</h2>
+      <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <mat-form-field class="full-width-input">
+          <input
+            matInput
+            placeholder="First Name"
+            formControlName="firstName"
+            required
+          />
+          <mat-error>Please provide a first name</mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width-input">
+          <input
+            matInput
+            placeholder="Last Name"
+            formControlName="lastName"
+            required
+          />
+          <mat-error>Please provide a last name</mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width-input">
+          <input
+            matInput
+            placeholder="E-mail"
+            formControlName="email"
+            required
+          />
+          <mat-error>Please provide a valid e-mail</mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width-input">
+          <input
+            matInput
+            placeholder="Phone Number"
+            formControlName="phoneNumber"
+            required
+          />
+          <mat-error>Please provide a valid phoneNumber</mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="primary" [disabled]="!form.valid" class="add-button">Add</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

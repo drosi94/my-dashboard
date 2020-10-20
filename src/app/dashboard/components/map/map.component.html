@@ -1,0 +1,8 @@
+<mat-expansion-panel (opened)="findLocation()" >
+  <mat-expansion-panel-header>
+    <mat-panel-title>Location</mat-panel-title>
+  </mat-expansion-panel-header>
+  <agm-map [latitude]="latitude" [longitude]="longitude">
+    <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+  </agm-map>
+</mat-expansion-panel>

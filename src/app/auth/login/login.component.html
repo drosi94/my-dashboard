@@ -1,0 +1,38 @@
+<div class="login-form">
+  <mat-card>
+    <mat-card-content>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <h2>Log In</h2>
+
+        <mat-error *ngIf="loginInvalid">
+          Username/Password combination is invalid
+        </mat-error>
+        <mat-form-field class="full-width-input">
+          <input
+            matInput
+            placeholder="Username"
+            formControlName="username"
+            required
+          />
+          <mat-error>Please provide a username</mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width-input">
+          <input
+            matInput
+            type="password"
+            placeholder="Password"
+            formControlName="password"
+            required
+          />
+          <mat-error>Please provide a valid password</mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="primary" [disabled]="loginLoading">
+            <span *ngIf="!loginLoading">Login</span>
+            <span *ngIf="loginLoading">
+                <mat-spinner [diameter]="30"></mat-spinner>
+            </span>
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

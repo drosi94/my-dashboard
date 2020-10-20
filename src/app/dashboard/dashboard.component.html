@@ -1,0 +1,21 @@
+<header>
+  <p>
+    <mat-toolbar color="primary">
+      <span>My Dashboard</span>
+      <span class="spacer"></span>
+      <button
+        mat-icon-button
+        class="example-icon"
+        aria-label="Logout User"
+        (click)="logout()"
+      >
+        <mat-icon>logout</mat-icon>
+      </button>
+    </mat-toolbar>
+  </p>
+</header>
+<main>
+  <app-map></app-map>
+  <app-calendar></app-calendar>
+  <app-user-details-table></app-user-details-table>
+</main>
